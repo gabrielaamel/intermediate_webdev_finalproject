@@ -3,7 +3,7 @@ function calculateSimpleInterest(p, r, t) {
 }
 
 function calculateTotalPayableAmount(p, interest) {
-    return p - interest; // error intencional del lab
+    return p + interest; // FIXED for Task 7
 }
 
 const calculate = () => {
@@ -16,9 +16,11 @@ const calculate = () => {
 
     let result = document.getElementById("result");
 
-    result.innerHTML = `<div>Principal Amount: <span>${p.toFixed(2)}</span></div>
-    <div>Total Interest: <span>${simpleInterest.toFixed(2)}</span></div>
-    <div>Total Amount: <span>${amount.toFixed(2)}</span></div>`;
+    result.innerHTML = `
+        <div>Principal Amount: <span>${p.toFixed(2)}</span></div>
+        <div>Total Interest: <span>${simpleInterest.toFixed(2)}</span></div>
+        <div>Total Amount: <span>${amount.toFixed(2)}</span></div>
+    `;
 };
 
 if (typeof module !== 'undefined')
@@ -26,4 +28,7 @@ if (typeof module !== 'undefined')
 
 // Task 4: ID verified
 // Task 5: Number() conversion verified
+// Task 6: Jasmine tests added
+// Task 7: Fixed total payable amount
+
 

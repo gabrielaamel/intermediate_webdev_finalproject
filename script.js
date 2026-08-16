@@ -12,3 +12,4 @@ function calculate() {
     document.getElementById("result").innerText = `Total Interest: $${interest}`;
     return interest;
 }
+// Task 4: ID verified

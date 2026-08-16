@@ -1,13 +1,14 @@
-const calculate = () => {
-  let p = document.getElementById("principle").value;
-  let r = document.getElementById("rate").value;
-  let t = document.getElementById("time").value;
-  let simpleInterest = (p * r * t) / 100;
-  let amount = p - simpleInterest;
+function calculate() {
+    const principal = Number(document.getElementById("principal").value);
+    const rate = Number(document.getElementById("rate").value);
+    const years = Number(document.getElementById("years").value);
 
-  let result = document.getElementById("result");
+    if (principal <= 0 || rate <= 0 || years <= 0) {
+        document.getElementById("result").innerText = "Please enter valid values.";
+        return;
+    }
 
-  result.innerHTML = `<div>Principal Amount: <span>${p.toFixed(2)}</span></div>
-  <div>Total Interest: <span>${simpleInterest.toFixed(2)}</span></div>
-  <div>Total Amount: <span>${amount.toFixed(2)}</span></div>`;
-};
+    const interest = (principal * rate * years) / 100;
+    document.getElementById("result").innerText = `Total Interest: $${interest}`;
+    return interest;
+}

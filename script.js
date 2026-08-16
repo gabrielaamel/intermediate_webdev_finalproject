@@ -13,3 +13,5 @@ function calculate() {
     return interest;
 }
 // Task 4: ID verified
+// Task 5: Number() conversion verified
+
